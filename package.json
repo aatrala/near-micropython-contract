@@ -1,0 +1,19 @@
+{
+  "name": "near-micropython-contract",
+  "version": "1.0.0",
+  "description": "MicroPython on NEAR",
+  "type": "module",
+  "scripts": {
+    "build": "node build.cjs && near-sdk-js build build/final_contract.ts build/contract.wasm",
+    "deploy": "near deploy --accountId $NEAR_ACCOUNT --wasmFile build/contract.wasm",
+    "test": "near call $NEAR_ACCOUNT say_hello --accountId $NEAR_ACCOUNT"
+  },
+  "dependencies": {
+    "near-sdk-js": "1.0.0"
+  },
+  "devDependencies": {
+    "near-cli": "^3.4.0",
+    "typescript": "^5.0.0"
+  }
+
+}

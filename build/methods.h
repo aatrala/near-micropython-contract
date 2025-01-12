@@ -1,0 +1,2 @@
+DEFINE_NEAR_METHOD(add_numbers)
+DEFINE_NEAR_METHOD(say_hello)
